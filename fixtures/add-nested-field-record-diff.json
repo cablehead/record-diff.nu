@@ -1,0 +1,12 @@
+[
+  {
+    "key": "customer.contact.address",
+    "action": "added",
+    "value_before": null,
+    "value_after": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "zip": "12345"
+    }
+  }
+]
