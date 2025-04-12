@@ -8,7 +8,7 @@ comprehensible.
 
 ```nushell
 do {
-  # Select one of you module paths to install the module
+  # Select one of your module paths to install the module
   ($NU_LIB_DIRS | default []) ++ ($env.NU_LIB_DIRS? | default []) | uniq | input list "Clone to" | cd $in
   git clone https://github.com/cablehead/record-diff.nu ./record-diff
   "ready:\nuse record-diff"
