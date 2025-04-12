@@ -1,7 +1,7 @@
 #!/usr/bin/env nu
 
 use std assert
-source record-diff.nu
+use record-diff.nu
 
 # Function to load all the fixture directories and their input/output files
 def get-fixtures [] {
