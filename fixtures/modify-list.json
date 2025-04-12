@@ -1,0 +1,52 @@
+[
+  {
+    "id": 567,
+    "product": {
+      "name": "Developer Bundle",
+      "categories": ["software", "tools", "productivity"],
+      "price": 149.99,
+      "features": [
+        {
+          "id": "feat1",
+          "name": "Code Editor",
+          "included": true
+        },
+        {
+          "id": "feat2",
+          "name": "Debugger",
+          "included": true
+        },
+        {
+          "id": "feat3",
+          "name": "Version Control",
+          "included": false
+        }
+      ]
+    }
+  },
+  {
+    "id": 567,
+    "product": {
+      "name": "Developer Bundle",
+      "categories": ["software", "development", "productivity"],
+      "price": 149.99,
+      "features": [
+        {
+          "id": "feat1",
+          "name": "Code Editor Pro",
+          "included": true
+        },
+        {
+          "id": "feat3",
+          "name": "Version Control",
+          "included": true
+        },
+        {
+          "id": "feat4",
+          "name": "Cloud Deployment",
+          "included": true
+        }
+      ]
+    }
+  }
+]

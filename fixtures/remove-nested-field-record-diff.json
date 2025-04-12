@@ -1,0 +1,8 @@
+[
+  {
+    "key": "product.details.specs.camera",
+    "action": "removed",
+    "value_before": "48MP quad",
+    "value_after": null
+  }
+]

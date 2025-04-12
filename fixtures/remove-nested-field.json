@@ -1,0 +1,35 @@
+[
+  {
+    "id": 789,
+    "product": {
+      "name": "Smartphone",
+      "details": {
+        "manufacturer": "TechCo",
+        "specs": {
+          "display": "6.5 inch",
+          "processor": "Octa-core",
+          "storage": "256GB",
+          "camera": "48MP quad"
+        },
+        "warranty": "2 years"
+      },
+      "price": 999.99
+    }
+  },
+  {
+    "id": 789,
+    "product": {
+      "name": "Smartphone",
+      "details": {
+        "manufacturer": "TechCo",
+        "specs": {
+          "display": "6.5 inch",
+          "processor": "Octa-core",
+          "storage": "256GB"
+        },
+        "warranty": "2 years"
+      },
+      "price": 999.99
+    }
+  }
+]

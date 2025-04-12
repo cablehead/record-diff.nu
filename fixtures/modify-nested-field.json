@@ -1,0 +1,26 @@
+[
+  {
+    "id": 123,
+    "metadata": {
+      "created_at": "2025-04-01T10:00:00Z",
+      "settings": {
+        "color": "blue",
+        "size": "medium",
+        "priority": 5
+      }
+    },
+    "tags": ["important", "review"]
+  },
+  {
+    "id": 123,
+    "metadata": {
+      "created_at": "2025-04-01T10:00:00Z",
+      "settings": {
+        "color": "red",
+        "size": "medium",
+        "priority": 8
+      }
+    },
+    "tags": ["important", "review"]
+  }
+]

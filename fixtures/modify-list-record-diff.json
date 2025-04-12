@@ -1,0 +1,46 @@
+[
+  {
+    "key": "product.categories",
+    "action": "modified",
+    "value_before": ["software", "tools", "productivity"],
+    "value_after": ["software", "development", "productivity"]
+  },
+  {
+    "key": "product.features",
+    "action": "modified",
+    "value_before": [
+      {
+        "id": "feat1",
+        "name": "Code Editor",
+        "included": true
+      },
+      {
+        "id": "feat2",
+        "name": "Debugger",
+        "included": true
+      },
+      {
+        "id": "feat3",
+        "name": "Version Control",
+        "included": false
+      }
+    ],
+    "value_after": [
+      {
+        "id": "feat1",
+        "name": "Code Editor Pro",
+        "included": true
+      },
+      {
+        "id": "feat3",
+        "name": "Version Control",
+        "included": true
+      },
+      {
+        "id": "feat4",
+        "name": "Cloud Deployment",
+        "included": true
+      }
+    ]
+  }
+]

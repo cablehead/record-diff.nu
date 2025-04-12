@@ -1,0 +1,14 @@
+[
+  {
+    "key": "metadata.settings.color",
+    "action": "modified",
+    "value_before": "blue",
+    "value_after": "red"
+  },
+  {
+    "key": "metadata.settings.priority",
+    "action": "modified",
+    "value_before": 5,
+    "value_after": 8
+  }
+]
