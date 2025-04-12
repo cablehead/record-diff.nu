@@ -13,17 +13,12 @@
 # - action: "added", "removed", or "modified"
 # - value_before: The value in the first record (or null for additions)
 # - value_after: The value in the second record (or null for removals)
-#
-# @example "Compare two simple records" {
-#     let first = {name: "Alice", age: 30}
-#     let second = {name: "Alice", age: 31}
-#     record-diff $first $second
-# } --result [{key: "age", action: "modified", value_before: 30, value_after: 31}]
-# @example "Detect nested additions" {
-#     let first = {user: {name: "Bob"}}
-#     let second = {user: {name: "Bob", email: "bob@example.com"}}
-#     record-diff $first $second
-# } --result [{key: "user.email", action: "added", value_before: null, value_after: "bob@example.com"}]
+@example "Compare two simple records" {
+  record-diff {name: "Alice" age: 30} {name: "Alice" age: 31}
+} --result [{key: "age" action: "modified" value_before: 30 value_after: 31}]
+@example "Detect nested additions" {
+  record-diff {user: {name: "Bob"}} {user: {name: "Bob" email: "bob@example.com"}}
+} --result [{key: "user.email" action: "added" value_before: null value_after: "bob@example.com"}]
 export def main [
   record1: record # First record to compare
   record2: record # Second record to compare
