@@ -5,15 +5,19 @@ A Nushell module for comparing two records and identifying nested differences wi
 ## Installation
 
 ```nushell
-http get https://raw.githubusercontent.com/cablehead/record-diff.nu/main/record-diff.nu | save -f record-diff.nu
+do { $NU_LIB_DIRS | input list "Select module directory" | cd $in ; git clone https://github.com/cablehead/record-diff.nu }
 ```
 
-Then add it to your Nushell scripts with `use record-diff.nu`
+## Update
+
+```nushell
+cd to module directory ; git pull
+```
 
 ## Usage
 
 ```nushell
-use record-diff.nu
+use record-diff
 
 $ record-diff {user: {name: "Bob"}} {user: {name: "Bob" email: "bob@example.com"}}
 
@@ -25,5 +29,5 @@ $ record-diff {user: {name: "Bob"}} {user: {name: "Bob" email: "bob@example.com"
 ## Testing
 
 ```
-./test-record-diff.nu
+./test.nu
 ```
