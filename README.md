@@ -5,7 +5,10 @@ A Nushell module for comparing two records and identifying nested differences wi
 ## Installation
 
 ```nushell
-do { $NU_LIB_DIRS | input list "Select module directory" | cd $in ; git clone https://github.com/cablehead/record-diff.nu }
+do {
+  ($NU_LIB_DIRS | default []) ++ ($env.NU_LIB_DIRS? | default [])  | uniq | input list "Clone to" | cd $in
+  git clone https://github.com/cablehead/record-diff.nu ./record-diff
+}
 ```
 
 ## Update
