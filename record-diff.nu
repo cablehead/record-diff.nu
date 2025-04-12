@@ -1,7 +1,7 @@
 def record-diff [
     record1: record  # First record to compare
     record2: record  # Second record to compare
-] -> table {
+] {
     # Convert both records to tables of key-value pairs
     let keys1 = ($record1 | columns)
     let keys2 = ($record2 | columns)
@@ -14,12 +14,14 @@ def record-diff [
                                                                                                                                                                                                                                  
     # Check for modified values
     for key in ($keys1 | where {|k| $k in $keys2}) {
-        if $record1 | get $key != $record2 | get $key {
+        let val1 = ($record1 | get $key)
+        let val2 = ($record2 | get $key)
+        if ($val1 != $val2) {
             $results = ($results | append {
                 key: $key
                 action: "modified"
-                value_before: ($record1 | get $key)
-                value_after: ($record2 | get $key)
+                value_before: $val1
+                value_after: $val2
             })
         }
     }
