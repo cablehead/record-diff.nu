@@ -1,20 +1,29 @@
 # record-diff.nu
 
-A Nushell module for comparing two records and identifying nested differences with detailed change information. Makes differences in records human comprehensible.
+A Nushell module for comparing two records and identifying nested differences
+with detailed change information. Makes differences in records human
+comprehensible.
 
 ## Installation
 
 ```nushell
 do {
-  ($NU_LIB_DIRS | default []) ++ ($env.NU_LIB_DIRS? | default [])  | uniq | input list "Clone to" | cd $in
+  # Select one of you module paths to install the module
+  ($NU_LIB_DIRS | default []) ++ ($env.NU_LIB_DIRS? | default []) | uniq | input list "Clone to" | cd $in
   git clone https://github.com/cablehead/record-diff.nu ./record-diff
+  "ready:\nuse record-diff"
 }
 ```
 
 ## Update
 
 ```nushell
-cd to module directory ; git pull
+do {
+  # Locate the current install
+  ($NU_LIB_DIRS | default []) ++ ($env.NU_LIB_DIRS? | default []) | each { path join "record-diff" } | where { path exists } | first | cd $in
+  # And update
+  git pull
+}
 ```
 
 ## Usage
