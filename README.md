@@ -9,7 +9,7 @@ comprehensible.
 ```nushell
 do {
   # Select one of your module paths to install the module
-  ($NU_LIB_DIRS | default []) ++ ($env.NU_LIB_DIRS? | default []) | uniq | input list "Clone to" | cd $in
+  $NU_LIB_DIRS | default [] | append $env.NU_LIB_DIRS? | uniq | input list "Clone to" | cd $in
   git clone https://github.com/cablehead/record-diff.nu ./record-diff
   "ready:\nuse record-diff"
 }
@@ -20,7 +20,7 @@ do {
 ```nushell
 do {
   # Locate the current install
-  ($NU_LIB_DIRS | default []) ++ ($env.NU_LIB_DIRS? | default []) | each { path join "record-diff" } | where { path exists } | first | cd $in
+  $NU_LIB_DIRS | default [] | append $env.NU_LIB_DIRS? | each { path join "record-diff" } | where { path exists } | first | cd $in
   # And update
   git pull
 }
